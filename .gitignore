@@ -303,3 +303,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .claude/settings.local.json
+
+# Cloudflare Workers local dev state
+.wrangler/

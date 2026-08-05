@@ -3,5 +3,13 @@
   "name": "mcp-sequential-thinking",
   "main": "worker.ts",
   "compatibility_date": "2024-11-01",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      { "name": "SequentialThinkingMCP", "class_name": "SequentialThinkingMCP" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["SequentialThinkingMCP"] }
+  ]
 }

@@ -22,7 +22,10 @@
     "build": "tsc && shx chmod +x dist/*.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "typecheck:worker": "tsc -p tsconfig.worker.json",
+    "dev:worker": "wrangler dev",
+    "deploy:worker": "wrangler deploy"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
@@ -30,11 +33,13 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250906.0",
     "@types/node": "^22",
     "@types/yargs": "^17.0.32",
     "@vitest/coverage-v8": "^4.1.8",
     "shx": "^0.4.0",
     "typescript": "^5.3.3",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.8",
+    "wrangler": "^4.28.0"
   }
 }
